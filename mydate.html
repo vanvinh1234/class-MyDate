@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My date</title>
+</head>
+<body>
+<script>
+    //xây dựng lớp MyDate với 3 tham số truyền vào;
+    let MyDate = function(day,month,year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        //xây dựng phương thức trả về ngày tháng năm;
+        this.getDay = function () {
+            return this.day;
+        };
+        this.getMonth = function () {
+            return this.month;
+        };
+        this.getYear = function () {
+            return this.year;
+        };
+        //xay dung phuong thuc thiet dat lai gia tri cac thuoc tinh day, month, year
+        this.setDay = function (day) {
+            this.day = day;
+        };
+        this.setMonth = function (month) {
+            this.month = month;
+        };
+        this.setYear = function (year) {
+            this.year = year;
+        }
+    };
+    let date = new MyDate(2, 2, 2007);
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    alert(day + "/" + month + "/" + year);
+</script>
+</body>
+</html>
